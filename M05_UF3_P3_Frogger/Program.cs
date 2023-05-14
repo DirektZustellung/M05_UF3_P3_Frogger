@@ -29,7 +29,7 @@ namespace M05_UF3_P3_Frogger
                 bool speedPlayer = false;
                 bool damageElements = true;
                 bool damageBackground = false;
-                const float percent = 0.03f;
+                const float percent = 0.05f;
                 float elementsPercent = (Utils.MAP_HEIGHT - i) * percent;
                 List<ConsoleColor> colorsElements = new List<ConsoleColor>(Utils.colorsCars);
                 if (i == 0 || i == ((Utils.MAP_HEIGHT-1)*0.5) || i == (Utils.MAP_HEIGHT - 1)) 
@@ -43,7 +43,9 @@ namespace M05_UF3_P3_Frogger
                 {
                     elementsChar = Utils.charLogs;
                     background = ConsoleColor.Blue;
-                    speedPlayer = true;  
+                    speedPlayer = true;
+                    damageElements = false;
+                    damageBackground = true;
                     colorsElements = new List<ConsoleColor>(Utils.colorsLogs);
                 }else
                 {
